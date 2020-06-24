@@ -1,22 +1,192 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    
+    <title>Conversation Starter</title>
+</head>
+<body>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Samsung Next Conversation Starter</h1>
+        <p class="lead">Select a card to see your conversation starter</p>
+    </div>
+    
+    <div class="container">
+        
+        <!-- Line 1 start -->
+        <div class="card-deck mb-4 text-center">
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
-</html>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Line 1 end -->
+        
+        <!-- Line 2 start -->
+        <div class="card-deck mb-4 text-center">
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <a onclick="showquestion()" href="javascript:void(0);">
+                        <img class="card-img-top" src="back.png" alt="Card image cap">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Line 2 end -->
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                        <img class="card-img-top" src="question.jpg" alt="modal image cap">
+                        
+                        <h2 id="thequestion">
+                            placeholder
+                        </h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script>
+            cards = [
+            "What color best describes you in the past week?",
+            "What did you need more of last week, to push or to wait?",
+            "Who was your best teacher last week, why? What Did you learn?",
+            "Which opportunity are you sorry you missed last week?",
+            "What did you need more of last week; to listen or to talk?",
+            "What does your ideal Sunday look like?",
+            "How did you best spend your time last week?",
+            "If you could have a button that changes everything, what would you change in the past/next week?",
+            "How would you divide your 80-20 time next week and why?",
+            "Who do you want to ask forgiveness from?",
+            "Which song would you choose to begin the next week with?",
+            "What was the smartest decision you made last week?",
+            "Last week, which one of your “Friends” cast were you?",
+            "Which of your personality traits got you in the most trouble this week?",
+            "Who did you work really well this week?",
+            "What happened last week that doesn’t have a logical explanation?",
+            "If you had to choose a different name for me, what would it be?",
+            "What really pisses you off?",
+            "Which famous person would you want to invite to a meeting next week?",
+            "What you would do next week if you had a team of 5?",
+            "When did you feel the most optimpsic last week?",
+            "When building your dream team for next week , who would make your top 5 ?",
+            "Who are you waiting to work with next week?",
+            "Which superhero would you have invited to visit you this past week?",
+            "If you were the CEO, what decision would you make in order to make next week awesome?",
+            "After this past week, what would you prefer? To be wiser? To be faster? To be nicer?",
+            "What song would you add to the past week’s soundtrack?",
+            "Which mythical creature would improve your next week the most if it existed?",
+            "What type of font were you this week?",
+            "If you had to choose another name for me what would it be?",
+            "A “powered by results” moment I had this week was..",
+            "What are you dying to try (that you have not yet tried) in the next week?",
+            "If you could delete one day next week, which day would it be?",
+            "If you had a mirror on your forehead what would I see?",
+            "What needs to happen for you to be happy next week?",
+            "Which achievement are you most proud of?",
+            "A “Try.Fall.Repeat” moment I had this week was?",
+            "If you were your own work-besty what would you say to yourself about last week?",
+            ]
+            
+            function shuffle(){
+                return cards.sort(function (a, b) { return 0.5 - Math.random() });
+            }
+            
+            function showquestion(){
+                let s = shuffle();
+                $('#thequestion').text(s[0]);
+                $('#exampleModalCenter').modal('toggle');
+                return false;
+            }
+        </script>
+    </body>
+    </html>
